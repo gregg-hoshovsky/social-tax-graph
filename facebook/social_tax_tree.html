@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Dialog - Modal form</title>
+		
+
+
+		
+
+	<script type="text/javascript" src="./_lib/jquery.js"></script>
+	<script type="text/javascript" src="./_lib/jquery.cookie.js"></script>
+	<script type="text/javascript" src="./jquery.jstree.js"></script>	
+
+	<script src="http://jqueryui.com/external/jquery.bgiframe-2.1.2.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.core.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.widget.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.mouse.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.button.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.draggable.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.position.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.resizable.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.dialog.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.effects.core.js"></script>
+		<link rel="stylesheet" href="http://jqueryui.com/themes/base/jquery.ui.all.css">
+	<link rel="stylesheet" href="http://jqueryui.com/demos/demos.css">
+	<style>
+		body { font-size: 62.5%; }
+		label, input { display:block; }
+		input.text { margin-bottom:12px; width:95%; padding: .4em; }
+		fieldset { padding:0; border:0; margin-top:25px; }
+		h1 { font-size: 1.2em; margin: .6em 0; }
+		div#users-contain { width: 350px; margin: 20px 0; }
+		div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+		div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+		.ui-dialog .ui-state-error { padding: .3em; }
+		.validateTips { border: 1px solid transparent; padding: 0.3em; }
+	</style>
+	<link type="text/css" rel="stylesheet" href="./_docs/syntax/!style.css"/>
+	<link type="text/css" rel="stylesheet" href="./_docs/!style.css"/>
+	<script type="text/javascript" src="./_docs/syntax/!script.js"></script>
+	<script type="text/javascript" src="./js/tree_script.js"></script>
+
+<script type="text/javascript" >
+var tree_data = [
+				{"attr":
+					{"id":"node_449","rel":"folder"},
+					"metadata" : { id : 449, "percent": 10},
+					"data":"New node","state":"closed",
+					"children" : 
+					[				
+						{"attr":
+						{"id":"node_450","rel":"folder"},
+						"metadata" : { id : 450, "percent": 10 },
+						"data":"New node","state":"closed"},
+						{"attr":
+						{"id":"node_447","rel":"folder"},
+						"metadata" : { id : 447, "percent": 10 },
+						"data":"New node2","state":""}
+					]
+				},
+				{"attr":
+					{"id":"node_448","rel":"folder"},
+					"metadata" : { id : 448, "percent": 10 },
+					"data":"New node3","state":""},
+				{"attr":
+					{"id":"node_442","rel":""},
+					"metadata" : { id : 442 , "percent": 10},
+					"data":"","state":""},
+				{"attr":
+					{"id":"node_452","rel":"folder"},
+					"metadata" : { id : 452, "percent": 10 },
+					"data":"hello",
+					"state":"closed"},
+				{"attr":
+					{"id":"node_459","rel":"folder"},
+					"metadata" : { id : 459 , "percent": 10},
+					"data":"New node",
+					"state":""},
+				{"attr":
+					{"id":"node_460","rel":"default"},
+					"metadata" : { id : 460 , "percent": 10},
+					"data":"New node",
+					"state":"",
+					"title":"title"
+					}
+		];
+</script>
+
+
+</head>
+<body>
+
+<div id="mmenu" style="height:30px; overflow:auto;">
+
+<input type="button" id="clear_search" value="clear" style="display:block; float:left;"/>
+<input type="button" id="search" value="search" style="display:block; float:left;"/>
+<input type="text" id="text" value="" style="display:block; float:leftt;" />
+</div>
+
+<table>
+<tr><th>Your tax tree</th><th>Social tax tree</th></tr>
+<tr><td>
+<div id="mmenu" style="height:30px; overflow:auto;">
+<input type="button" id="add_folder" value="add folder" style="display:block; float:left;"/>
+<input type="button" id="rename" value="rename" style="display:block; float:left;"/>
+<input type="button" id="remove" value="remove" style="display:block; float:left;"/>
+</div>
+</td><td>
+</td></tr>
+<tr><td>
+<!-- the tree container (notice NOT an UL node) -->
+<div id="demo" class="demo" style="height:200px;width:200px;"></div>
+<!-- the tree container (notice NOT an UL node) -->
+</td><td>
+<div id="demo2" class="demo" style="height:200px;width:200px;"></div>
+</div>
+
+</td></tr>
+</table>
+<div id='alog' style="border:1px solid gray; padding:5px; height:100px; margin-top:15px; overflow:auto; font-family:Monospace;"></div>
+<!-- JavaScript neccessary for the tree -->
+
+<div id="dialog-form" title="Create new user">
+	<p class="validateTips">All form fields are required.</p>
+
+	<form>
+	<fieldset>
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+		<label for="email">Percent</label>
+		<input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+</div>
+
+
+
+
+</body>
+</html>
