@@ -11,7 +11,7 @@
 	<script src="http://jqueryui.com/external/jquery.bgiframe-2.1.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.8.19/jquery-ui.min.js" type="text/javascript"></script>
 	<script src="http://jquery-ui.googlecode.com/svn/tags/latest/external/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="http://jqueryui.com/demo/demos.css">
+	<link rel="stylesheet" href="http://jqueryui.com/demos/demos.css">
 	<style>
 		body { font-size: 62.5%; }
 		label, input { display:block; }
@@ -118,7 +118,7 @@
 		$.ajax(
 		{
 			type: "POST",
-			url: "bin/uploadnew.php",
+			url: "/bin/uploadnew.php",
 			data: dataString,
 			success: function() 
 			{

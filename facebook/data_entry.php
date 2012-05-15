@@ -350,7 +350,7 @@ google_ad_height = 90;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-</td><td>
+</td></tr><tr><td>
    <section id="why-me" class="clearfix">
 
 <div id="contact_form">
